@@ -5,7 +5,7 @@ import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
 
-const Navbar = () => {
+const Navbar = ({ darkMode, setDarkMode }) => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -25,11 +25,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      if (scrollTop > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(scrollTop > 100);
     };
 
     const roleInterval = setInterval(() => {
@@ -39,17 +35,20 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      clearInterval(roleInterval); // Clear interval on component unmount
+      clearInterval(roleInterval);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  // Toggle function for dark mode
+  const toggleDarkMode = () => {
+    setDarkMode((prevMode) => !prevMode);
+  };
+
   return (
     <nav
-      className={`${
-        styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-primary" : "bg-transparent"
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${
+        scrolled ? (darkMode ? "bg-white" : "bg-primary") : "bg-transparent"
       }`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
@@ -62,7 +61,7 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
+          <p className={`text-${darkMode ? 'black' : 'white'} text-[18px] font-bold cursor-pointer flex`}>
             Charles &nbsp;
             <span className='sm:block hidden'> | {roles[currentRoleIndex]}</span>
           </p>
@@ -73,8 +72,8 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+                active === nav.title ? "text-black" : "text-secondary"
+              } hover:text-black text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
@@ -100,7 +99,7 @@ const Navbar = () => {
                 <li
                   key={nav.id}
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
+                    active === nav.title ? "text-black" : "text-secondary"
                   }`}
                   onClick={() => {
                     setToggle(!toggle);
@@ -113,6 +112,14 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
+
+        {/* Dark mode toggle button */}
+        <button
+          onClick={toggleDarkMode}
+          className={`ml-4 p-2 rounded ${darkMode ? "bg-gray-700" : "bg-gray-300"} text-white`}
+        >
+          {darkMode ? "Dark Mode" : "Light Mode"}
+        </button>
       </div>
     </nav>
   );
