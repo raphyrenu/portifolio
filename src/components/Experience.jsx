@@ -77,6 +77,7 @@ const Experience = ({ darkMode }) => {
         </VerticalTimeline>
       </div>
     </>
+    
   );
 };
 
