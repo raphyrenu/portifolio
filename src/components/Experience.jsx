@@ -12,14 +12,14 @@ import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
-const ExperienceCard = ({ experience }) => {
+const ExperienceCard = ({ experience, darkMode }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
-        color: "#fff",
+        background: darkMode ? "#1d1836" : "#ffffff", // Change background for white mode
+        color: darkMode ? "#fff" : "#000", // Change text color for white mode
       }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+      contentArrowStyle={{ borderRight: darkMode ? "7px solid  #232631" : "7px solid #d3d3d3" }} // Change arrow color for white mode
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
@@ -33,11 +33,8 @@ const ExperienceCard = ({ experience }) => {
       }
     >
       <div>
-        <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
-        <p
-          className='text-secondary text-[16px] font-semibold'
-          style={{ margin: 0 }}
-        >
+        <h3 className='text-[24px] font-bold'>{experience.title}</h3>
+        <p className='font-semibold' style={{ margin: 0 }}>
           {experience.company_name}
         </p>
       </div>
@@ -46,7 +43,7 @@ const ExperienceCard = ({ experience }) => {
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className='text-white-100 text-[14px] pl-1 tracking-wider'
+            className={`text-[14px] pl-1 tracking-wider ${darkMode ? 'text-white-100' : 'text-black'}`} // Change text color for points
           >
             {point}
           </li>
@@ -56,7 +53,7 @@ const ExperienceCard = ({ experience }) => {
   );
 };
 
-const Experience = () => {
+const Experience = ({ darkMode }) => {
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -74,6 +71,7 @@ const Experience = () => {
             <ExperienceCard
               key={`experience-${index}`}
               experience={experience}
+              darkMode={darkMode} // Pass darkMode prop
             />
           ))}
         </VerticalTimeline>
