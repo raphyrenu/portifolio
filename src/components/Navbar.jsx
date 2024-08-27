@@ -43,7 +43,6 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   // Toggle function for dark mode
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode);
-    console.log("Dark mode is now:", !darkMode);
   };
 
   return (
@@ -64,7 +63,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
           <p
             className={`text-[18px] font-bold cursor-pointer flex ${
-              darkMode ? "text-black" : "text-white"
+              darkMode ? "text-white" : "text-black"
             }`}
           >
             Charles &nbsp;
@@ -80,8 +79,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? "text-black" : "text-secondary"
-              } hover:text-black text-[18px] font-medium cursor-pointer`}
+                active === nav.title ? (darkMode ? "text-white" : "text-black") : "text-secondary"
+              } hover:${darkMode ? "text-white" : "text-black"} text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
@@ -100,14 +99,14 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } p-6 ${darkMode ? "bg-gray-900" : "bg-white"} absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-black" : "text-secondary"
+                    active === nav.title ? (darkMode ? "text-white" : "text-black") : "text-secondary"
                   }`}
                   onClick={() => {
                     setToggle(!toggle);
@@ -121,15 +120,24 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           </div>
         </div>
 
-        {/* Dark mode toggle button */}
-        <button
-          onClick={toggleDarkMode}
-          className={`ml-4 p-2 rounded ${
-            darkMode ? "bg-gray-700" : "bg-gray-300"
-          } text-white`}
-        >
-          {darkMode ? "White Mode" : "Dark Mode"}
-        </button>
+        {/* Dark mode toggle switch */}
+        <div className="flex items-center ml-4">
+          <label className="relative inline-flex items-center cursor-pointer">
+            <input
+              type="checkbox"
+              className="sr-only"
+              checked={darkMode}
+              onChange={toggleDarkMode}
+            />
+            <div className={`w-11 h-6 rounded-full ${darkMode ? "bg-gray-700" : "bg-gray-300"} transition-all duration-300 ease-in-out`}>
+              <span
+                className={`absolute left-0 w-6 h-6 bg-white rounded-full shadow transform transition-transform duration-300 ease-in-out ${
+                  darkMode ? "translate-x-full" : ""
+                }`}
+              ></span>
+            </div>
+          </label>
+        </div>
       </div>
     </nav>
   );

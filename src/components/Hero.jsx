@@ -12,7 +12,6 @@ const Hero = ({ darkMode }) => {
     "mobile applications <br /> and game development",
     "graphic designs <br /> and animations",
     "interactive user experiences <br />",
-    // Add more skills or variations as needed
   ];
 
   useEffect(() => {
@@ -32,10 +31,10 @@ const Hero = ({ darkMode }) => {
         </div>
 
         <div>
-          <h1 className={`${styles.heroHeadText} ${darkMode ? 'text-gray-800' : 'text-white-100'}`}>
+          <h1 className={`${styles.heroHeadText} ${darkMode ? 'text-white-100' : 'text-gray-800'}`}>
             Hi, I'm <span className="text-[#915EFF]">Charles</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 ${darkMode ? 'text-gray-800' : 'text-white-100'}`}>
+          <p className={`${styles.heroSubText} mt-2 ${darkMode ? 'text-white-100' : 'text-gray-800'}`}>
             I develop <span dangerouslySetInnerHTML={{ __html: skills[currentSkillIndex] }} />
           </p>
         </div>
@@ -45,7 +44,7 @@ const Hero = ({ darkMode }) => {
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
-          <div className={`w-[35px] h-[64px] rounded-3xl border-4 ${darkMode ? 'border-gray-300' : 'border-secondary'} flex justify-center items-start p-2`}>
+          <div className={`w-[35px] h-[64px] rounded-3xl border-4 ${darkMode ? 'border-secondary' : 'border-gray-300'} flex justify-center items-start p-2`}>
             <motion.div
               animate={{
                 y: [0, 24, 0],
@@ -55,7 +54,7 @@ const Hero = ({ darkMode }) => {
                 repeat: Infinity,
                 repeatType: "loop",
               }}
-              className={`w-3 h-3 rounded-full ${darkMode ? 'bg-gray-300' : 'bg-secondary'} mb-1`}
+              className={`w-3 h-3 rounded-full ${darkMode ? 'bg-secondary' : 'bg-gray-300'} mb-1`}
             />
           </div>
         </a>
