@@ -9,6 +9,18 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+
+  const roles = [
+    "Web Developer",
+    "Game Developer",
+    "Software Engineer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Mobile Developer",
+    "3D Designer",
+    "Designer"
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,9 +32,16 @@ const Navbar = () => {
       }
     };
 
+    const roleInterval = setInterval(() => {
+      setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+    }, 3000); // Change role every 3 seconds
+
     window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      clearInterval(roleInterval); // Clear interval on component unmount
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
@@ -45,7 +64,7 @@ const Navbar = () => {
           <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
             Charles &nbsp;
-            <span className='sm:block hidden'> | Web Developer</span>
+            <span className='sm:block hidden'> | {roles[currentRoleIndex]}</span>
           </p>
         </Link>
 
