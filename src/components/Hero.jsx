@@ -31,10 +31,10 @@ const Hero = ({ darkMode }) => {
         </div>
 
         <div>
-          <h1 className={`${styles.heroHeadText} ${darkMode ? 'text-white-100' : 'text-gray-800'}`}>
+          <h1 className={`${styles.heroHeadText} dark:text-white-100 text-gray-800`}>
             Hi, I'm <span className="text-[#915EFF]">Charles</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 ${darkMode ? 'text-white-100' : 'text-gray-800'}`}>
+          <p className={`${styles.heroSubText} mt-2  dark:text-white-100' : 'text-gray-800 `}>
             I develop <span dangerouslySetInnerHTML={{ __html: skills[currentSkillIndex] }} />
           </p>
         </div>
@@ -44,7 +44,7 @@ const Hero = ({ darkMode }) => {
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
-          <div className={`w-[35px] h-[64px] rounded-3xl border-4 ${darkMode ? 'border-secondary' : 'border-gray-300'} flex justify-center items-start p-2`}>
+          <div className={`w-[35px] h-[64px] rounded-3xl border-4  dark:border-secondary border-gray-300 flex justify-center items-start p-2`}>
             <motion.div
               animate={{
                 y: [0, 24, 0],
@@ -54,7 +54,7 @@ const Hero = ({ darkMode }) => {
                 repeat: Infinity,
                 repeatType: "loop",
               }}
-              className={`w-3 h-3 rounded-full ${darkMode ? 'bg-secondary' : 'bg-gray-300'} mb-1`}
+              className={`w-3 h-3 rounded-full dark:bg-secondary bg-gray-300 mb-1`}
             />
           </div>
         </a>

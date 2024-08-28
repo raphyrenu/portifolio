@@ -7,19 +7,19 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div className={`relative z-0 ${darkMode ? 'bg-primary text-white' : 'bg-white text-black'}`}>
-        <div className={`${darkMode ? 'bg-hero-pattern bg-cover bg-no-repeat bg-center' : '' }`}>
+      <div className={`relative z-0 dark:bg-primary dark:text-white bg-white text-black`}>
+        <div className={`dark:bg-hero-pattern dark:bg-cover dark:bg-no-repeat dark:bg-center `}>
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-          <Hero darkMode={darkMode} />
+          <Hero  />
         </div>
-        <About darkMode={darkMode} />
-        <Experience darkMode={darkMode}/>
-        <Tech darkMode={darkMode} />
-        <Works darkMode={darkMode}/>
-        <Feedbacks darkMode={darkMode}/>
+        <About  />
+        <Experience />
+        <Tech  />
+        <Works />
+        <Feedbacks />
         <div className="relative z-0">
-          <Contact darkMode={darkMode}/>
-          <StarsCanvas darkMode={darkMode}/>
+          <Contact />
+          <StarsCanvas />
         </div>
       </div>
     </BrowserRouter>
