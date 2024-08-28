@@ -24,7 +24,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className={`p-5 rounded-2xl sm:w-[360px] w-full dark:bg-tertiary bg-white `}
+        className={`p-5 rounded-2xl sm:w-[360px] w-full dark:bg-tertiary bg-white-100 `}
       >
         <div className='relative w-full h-[230px]'>
           <img
@@ -80,7 +80,7 @@ const Works = ({ darkMode }) => {
       <div className='w-full flex'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className={`mt-3 text-[17px] max-w-3xl leading-[30px] dark:text-secondary text-black `}
+          className={`mt-3 text-[17px] max-w-3xl leading-[30px] dark:text-secondary text-black-200 `}
         >
           Following projects showcases my skills and experience through
           real-world examples of my work...
