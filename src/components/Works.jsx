@@ -83,7 +83,7 @@ const Works = ({ darkMode }) => {
           className={`mt-3 text-[17px] max-w-3xl leading-[30px] dark:text-secondary text-black-200 `}
         >
           Following projects showcases my skills and experience through
-          real-world examples of my work...
+          real-world examples of my work..
         </motion.p>
       </div>
 
