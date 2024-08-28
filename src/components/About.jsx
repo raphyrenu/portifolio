@@ -10,9 +10,9 @@ const ServiceCard = ({ index, title, icon, darkMode }) => (
   <Tilt className='xs:w-[250px] w-full'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className={`w-full p-[1px] rounded-[20px] shadow-card ${
-        darkMode ? "bg-tertiary" : "bg-white"
-      }`}
+      className={`w-full p-[1px] rounded-[20px] shadow-card 
+        dark:bg-tertiary  bg-white
+      `}
     >
       <div
         options={{
@@ -20,9 +20,9 @@ const ServiceCard = ({ index, title, icon, darkMode }) => (
           scale: 1,
           speed: 450,
         }}
-        className={`rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col ${
-          darkMode ? "bg-tertiary text-white" : "bg-white text-black"
-        }`}
+        className={`rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col 
+          dark:bg-tertiary dark:text-white bg-white text-black
+        `}
       >
         <img
           src={icon}
@@ -39,13 +39,13 @@ const About = ({ darkMode }) => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} ${darkMode ? "text-white-100" : "text-black-800"}`}>Introduction</p>
-        <h2 className={`${styles.sectionHeadText} ${darkMode ? "text-white-100" : "text-black-800"}`}>Overview.</h2>
+        <p className={`${styles.sectionSubText} dark:text-white-100 text-black-800`}>Introduction</p>
+        <h2 className={`${styles.sectionHeadText} dark:text-white-100 text-black-800`}>Overview.</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className={`mt-4 text-[17px] max-w-3xl leading-[30px] ${darkMode ? "text-white-100" : "text-black-800"}`}
+        className={`mt-4 text-[17px] max-w-3xl leading-[30px] dark:text-white-100 text-black-800 `}
       >
         I'm a skilled software developer with experience in TypeScript and JavaScript...
       </motion.p>

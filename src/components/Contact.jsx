@@ -66,14 +66,14 @@ const Contact = ({ darkMode }) => { // Accept darkMode prop
 
   return (
     <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden ${darkMode ? 'bg-black-100' : 'bg-white'}`} // Background based on dark mode
+      className={`xl:mt-12 flex xl:flex-row flex-col-reverse rounded-2xl gap-10 overflow-hidden dark:bg-tertiary bg-white`} // Background based on dark mode
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className={`flex-[0.75] p-8 rounded-2xl ${darkMode ? 'bg-black-200' : 'bg-gray-200'}`} // Card background based on dark mode
+        className={`flex-[0.75] p-8 rounded-2xl dark:bg-black-200 bg-white-100`} // Card background based on dark mode
       >
-        <p className={`${darkMode ? 'text-white' : 'text-black'} ${styles.sectionSubText}`}>Get in touch</p>
-        <h3 className={`${darkMode ? 'text-white' : 'text-black'} ${styles.sectionHeadText}`}>Contact.</h3>
+        <p className={`dark:text-white text-black  ${styles.sectionSubText}`}>Get in touch</p>
+        <h3 className={`dark:text-white text-black ${styles.sectionHeadText}`}>Contact.</h3>
 
         <form
           ref={formRef}
@@ -81,42 +81,42 @@ const Contact = ({ darkMode }) => { // Accept darkMode prop
           className='mt-12 flex flex-col gap-8'
         >
           <label className='flex flex-col'>
-            <span className={`${darkMode ? 'text-white' : 'text-black'} font-medium mb-4`}>Your Name</span>
+            <span className={`dark:text-white text-black  font-medium mb-4`}>Your Name</span>
             <input
               type='text'
               name='name'
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
-              className={`py-4 px-6 placeholder:text-secondary ${darkMode ? 'bg-black-300 text-white' : 'bg-gray-100 text-black'} rounded-lg outline-none border-none font-medium`}
+              className={`py-4 px-6 placeholder:text-secondary  dark:bg-tertiary dark:text-white  bg-white text-black rounded-lg outline-none border-none font-medium`}
             />
           </label>
           <label className='flex flex-col'>
-            <span className={`${darkMode ? 'text-white' : 'text-black'} font-medium mb-4`}>Your email</span>
+            <span className={` dark:text-white  text-black font-medium mb-4`}>Your email</span>
             <input
               type='email'
               name='email'
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
-              className={`py-4 px-6 placeholder:text-secondary ${darkMode ? 'bg-black-300 text-white' : 'bg-gray-100 text-black'} rounded-lg outline-none border-none font-medium`}
+              className={`py-4 px-6 placeholder:text-secondary dark:bg-tertiary dark:text-white bg-white text-black rounded-lg outline-none border-none font-medium`}
             />
           </label>
           <label className='flex flex-col'>
-            <span className={`${darkMode ? 'text-white' : 'text-black'} font-medium mb-4`}>Your Message</span>
+            <span className={`dark:text-white text-black font-medium mb-4`}>Your Message</span>
             <textarea
               rows={7}
               name='message'
               value={form.message}
               onChange={handleChange}
               placeholder='What you want to say?'
-              className={`py-4 px-6 placeholder:text-secondary ${darkMode ? 'bg-black-300 text-white' : 'bg-gray-100 text-black'} rounded-lg outline-none border-none font-medium`}
+              className={`py-4 px-6 placeholder:text-secondary dark:bg-tertiary dark:text-white bg-white text-black rounded-lg outline-none border-none font-medium`}
             />
           </label>
 
           <button
             type='submit'
-            className={`py-3 px-8 rounded-xl outline-none w-fit font-bold shadow-md ${darkMode ? 'bg-black-300 text-white' : 'bg-gray-800 text-white'}`}
+            className={`py-3 px-8 rounded-xl outline-none w-fit font-bold shadow-md dark:bg-tertiary dark:text-white bg-white text-secondary`}
           >
             {loading ? "Sending..." : "Send"}
           </button>

@@ -42,7 +42,15 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
   // Toggle function for dark mode
   const toggleDarkMode = () => {
-    setDarkMode((prevMode) => !prevMode);
+    const newDarkMode = !darkMode;
+    setDarkMode(newDarkMode);
+    
+    // Add or remove the "dark" class on the <html> element
+    if (newDarkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
   };
 
   return (

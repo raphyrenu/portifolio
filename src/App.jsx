@@ -7,22 +7,19 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      {/* Main container with dark or white mode background and text colors */}
       <div className={`relative z-0 ${darkMode ? 'bg-primary text-white' : 'bg-white text-black'}`}>
-        {/* Hero section background with pattern for white mode */}
-        <div className={`${!darkMode ? '' : 'bg-hero-pattern bg-cover bg-no-repeat bg-center' }`}>
+        <div className={`${darkMode ? 'bg-hero-pattern bg-cover bg-no-repeat bg-center' : '' }`}>
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-          <Hero darkMode={darkMode} setDarkMode={setDarkMode}/>
+          <Hero darkMode={darkMode} />
         </div>
-        {/* Other sections pass the darkMode state */}
-        <About darkMode={darkMode} setDarkMode={setDarkMode}/>
-        <Experience darkMode={darkMode} setDarkMode={setDarkMode}/>
-        <Tech darkMode={darkMode} setDarkMode={setDarkMode}/>
-        <Works darkMode={darkMode} setDarkMode={setDarkMode}/>
-        <Feedbacks darkMode={darkMode} setDarkMode={setDarkMode}/>
+        <About darkMode={darkMode} />
+        <Experience darkMode={darkMode}/>
+        <Tech darkMode={darkMode} />
+        <Works darkMode={darkMode}/>
+        <Feedbacks darkMode={darkMode}/>
         <div className="relative z-0">
-          <Contact darkMode={darkMode} setDarkMode={setDarkMode}/>
-          <StarsCanvas darkMode={darkMode} setDarkMode={setDarkMode}/>
+          <Contact darkMode={darkMode}/>
+          <StarsCanvas darkMode={darkMode}/>
         </div>
       </div>
     </BrowserRouter>

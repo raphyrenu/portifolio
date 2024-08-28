@@ -17,7 +17,7 @@ const FeedbackCard = ({
 }) => (
   <motion.div
     variants={fadeIn("", "spring", index * 0.5, 0.75)}
-    className={`p-10 rounded-3xl xs:w-[320px] w-full ${darkMode ? 'bg-black-200 text-white' : 'bg-white text-black'}`}
+    className={`p-10 rounded-3xl xs:w-[320px] w-full dark:bg-black-200 dark:text-white bg-white text-black`}
   >
     <p className='font-black text-[48px]'>"</p>
 
@@ -46,9 +46,9 @@ const FeedbackCard = ({
 
 const Feedbacks = ({ darkMode }) => {
   return (
-    <div className={`mt-12 rounded-[20px] ${darkMode ? 'bg-black-100' : 'bg-white'}`}>
+    <div className={`mt-12 rounded-[20px] dark:bg-black-100 bg-white'}`}>
       <div
-        className={`rounded-2xl ${styles.padding} min-h-[300px] ${darkMode ? 'bg-tertiary' : 'bg-gray-200'}`}
+        className={`rounded-2xl ${styles.padding} min-h-[300px] dark:bg-tertiary bg-white-100`}
       >
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>What others say</p>

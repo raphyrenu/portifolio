@@ -1,5 +1,5 @@
 import React from "react";
-import Tilt from "react-tilt";
+import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { github } from "../assets";
@@ -24,7 +24,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className={`p-5 rounded-2xl sm:w-[360px] w-full ${darkMode ? "bg-tertiary" : "bg-white"}`}
+        className={`p-5 rounded-2xl sm:w-[360px] w-full dark:bg-tertiary bg-white `}
       >
         <div className='relative w-full h-[230px]'>
           <img
@@ -36,9 +36,9 @@ const ProjectCard = ({
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className={`w-10 h-10 rounded-full flex justify-center items-center cursor-pointer ${
-                darkMode ? "black-gradient" : "white-gradient"
-              }`}
+              className={`w-10 h-10 rounded-full flex justify-center items-center cursor-pointer 
+                dark:black-gradient white-gradient
+              `}
             >
               <img
                 src={github}
@@ -50,8 +50,8 @@ const ProjectCard = ({
         </div>
 
         <div className='mt-5'>
-          <h3 className={`font-bold text-[24px] ${darkMode ? "text-white" : "text-black"}`}>{name}</h3>
-          <p className={`mt-2 text-[14px] ${darkMode ? "text-secondary" : "text-black"}`}>{description}</p>
+          <h3 className={`font-bold text-[24px] dark:text-white text-black `}>{name}</h3>
+          <p className={`mt-2 text-[14px] dark:text-secondary text-black`}>{description}</p>
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
@@ -73,14 +73,14 @@ const Works = ({ darkMode }) => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} ${darkMode ? "text-white" : "text-black"}`}>My work</p>
-        <h2 className={`${styles.sectionHeadText} ${darkMode ? "text-white" : "text-black"}`}>Projects.</h2>
+        <p className={`${styles.sectionSubText}  dark:text-white text-black`}>My work</p>
+        <h2 className={`${styles.sectionHeadText} dark:text-white text-black`}>Projects.</h2>
       </motion.div>
 
       <div className='w-full flex'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className={`mt-3 text-[17px] max-w-3xl leading-[30px] ${darkMode ? "text-secondary" : "text-black"}`}
+          className={`mt-3 text-[17px] max-w-3xl leading-[30px] dark:text-secondary text-black `}
         >
           Following projects showcases my skills and experience through
           real-world examples of my work...
