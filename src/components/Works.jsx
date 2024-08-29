@@ -83,15 +83,27 @@ const Works = ({ darkMode }) => {
           className={`mt-3 text-[17px] max-w-3xl leading-[30px] dark:text-secondary text-black-200 `}
         >
           Following projects showcases my skills and experience through
-          real-world examples of my work..
+          real-world examples of my work
         </motion.p>
       </div>
 
       <div className='mt-20 flex flex-wrap gap-7'>
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} darkMode={darkMode} />
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={`project-${index}`}
+          >
+            <ProjectCard
+              index={index}
+              {...project}
+              darkMode={darkMode}
+            />
+          </a>
         ))}
       </div>
+
     </>
   );
 };

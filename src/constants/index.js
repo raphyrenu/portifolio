@@ -203,29 +203,32 @@ const projects = [
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/", 
+    link:"https://clinique-medical-st-paul.onrender.com/",
   },
   {
     name: "My Portfolio",
-  description:
-    "A personal portfolio website showcasing my projects, skills, and experience as a web developer. Users can explore my work, learn about my background, and get in touch with me for potential collaborations.",
-  tags: [
-    {
-      name: "react",
-      color: "blue-text-gradient",
-    },
-    {
-      name: "tailwindcss",
-      color: "green-text-gradient",
-    },
-    {
-      name: "javascript",
-      color: "yellow-text-gradient",
-    },
-  ],
+    description:
+      "A personal portfolio website showcasing my projects, skills, and experience as a web developer. Users can explore my work, learn about my background, and get in touch with me for potential collaborations.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "green-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "yellow-text-gradient",
+      },
+    ],
     image: jobit,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/", 
+    link:"https://hatumacharles.onrender.com/",
   },
 ];
+
 
 export { services, technologies, experiences, testimonials, projects };
