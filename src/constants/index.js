@@ -42,7 +42,7 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "3D Designer",
     icon: web,
   },
   {
@@ -50,11 +50,11 @@ const services = [
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "FullStack Developer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Designer",
     icon: creator,
   },
 ];
@@ -116,55 +116,42 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    title: "Junior Web Developer",
+    company_name: "Freelance",
+    icon: shopify,  // Reusing the Shopify icon
+    iconBg: "#1A202C",
+    date: "March 2024 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developing small-scale web applications and websites using HTML, CSS, and JavaScript.",
+      "Assisting clients with website updates, bug fixes, and performance improvements.",
+      "Gaining experience with responsive design and basic SEO practices.",
+      "Continuously learning and implementing new web development technologies.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    title: "Part-time React.js Developer",
+    company_name: "Local Startup",
+    icon: tesla,  // Reusing the Tesla icon
+    iconBg: "#2D3748",
+    date: "June 2024 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Building and maintaining features for a React.js-based web application.",
+      "Collaborating with a small team to enhance the user experience and functionality.",
+      "Implementing responsive design for various devices.",
+      "Participating in team meetings and contributing ideas for product improvement.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    title: "Student Developer",
+    company_name: "Online Learning Platform",
+    icon: starbucks,  // Reusing the Starbucks icon
+    iconBg: "#4A5568",
+    date: "Jan 2024 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Completing online courses and projects focused on web development.",
+      "Learning React.js, Node.js, and other modern web technologies.",
+      "Participating in coding challenges and hackathons to improve skills.",
+      "Building a personal portfolio to showcase projects and learning progress.",
     ],
   },
 ];
@@ -172,84 +159,42 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
+      "I thought it was impossible to make a website as beautiful as our product, but Charles proved me wrong.",
+    name: "Ihirwe",
+    designation: "Designer",
+    company: "RCA",
     image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
+      "I've never met a web developer who truly cares about their clients' success like Charles does.",
+    name: "Mugabe Herve",
+    designation: "Student",
+    company: "St Kizito",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
+      "After Charles optimized our website, our traffic increased by 50%. We can't thank them enough!",
+    name: "Roberto Mulla",
+    designation: "Singer",
+    company: "Mulla Enterprises",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "CMSP",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A web-based platform that allows patients to search, book, and manage appointments with healthcare providers, offering a convenient and efficient solution for all your medical needs.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
+        name: "node",
         color: "green-text-gradient",
       },
       {
@@ -257,7 +202,28 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: carrent,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "My Portfolio",
+  description:
+    "A personal portfolio website showcasing my projects, skills, and experience as a web developer. Users can explore my work, learn about my background, and get in touch with me for potential collaborations.",
+  tags: [
+    {
+      name: "react",
+      color: "blue-text-gradient",
+    },
+    {
+      name: "tailwindcss",
+      color: "green-text-gradient",
+    },
+    {
+      name: "javascript",
+      color: "yellow-text-gradient",
+    },
+  ],
+    image: jobit,
     source_code_link: "https://github.com/",
   },
 ];
