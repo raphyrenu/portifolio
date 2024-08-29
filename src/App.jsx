@@ -8,7 +8,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className={`relative z-0 dark:bg-primary dark:text-white bg-white text-black`}>
-        <div className={`dark:bg-hero-pattern dark:bg-cover dark:bg-no-repeat dark:bg-center `}>
+        <div className={`dark:bg-hero-pattern bg-hero-pattern2 bg-cover bg-no-repeat bg-center `}>
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
           <Hero  />
         </div>

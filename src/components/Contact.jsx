@@ -66,7 +66,7 @@ const Contact = ({ darkMode }) => { // Accept darkMode prop
 
   return (
     <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse rounded-2xl gap-10 overflow-hidden dark:bg-tertiary bg-white`} // Background based on dark mode
+      className={`xl:mt-12 flex xl:flex-row flex-col-reverse rounded-2xl gap-10 overflow-hidden dark:bg-tertiary bg-hero-pattern1 bg-cover bg-no-repeat bg-center`} // Background based on dark mode
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
