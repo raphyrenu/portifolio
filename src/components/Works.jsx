@@ -89,7 +89,7 @@ const Works = ({ darkMode }) => {
 
       <div className='mt-20 flex flex-wrap gap-7'>
         {projects.map((project, index) => (
-          <a~
+          <a
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
