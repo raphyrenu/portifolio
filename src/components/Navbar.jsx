@@ -81,6 +81,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             </span>
           </p>
         </Link>
+        
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((nav) => (
             <li
