@@ -6,6 +6,7 @@
   </div>
 
   <h3 align="center">A 3D Developer Portfolio</h3>
+  
 </div>
 ## 📋 <a name="table">Table of Contents</a>
 1. 🤖 [Introduction](#introduction)
