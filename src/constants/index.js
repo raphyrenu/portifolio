@@ -231,7 +231,7 @@ const projects = [
   {
     name: "Ireme",
     description:
-      "",
+      "A skill management system designed to showcase and track employees' skills, projects, and experience within an organization. Users can explore team members' skill sets, view completed work, and assess individual growth, making it easier to allocate resources and identify potential collaborations.",
     tags: [
       {
         name: "react",
