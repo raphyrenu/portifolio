@@ -228,6 +228,28 @@ const projects = [
     source_code_link: "https://github.com/", 
     link:"https://hatumacharles.onrender.com/",
   },
+  {
+    name: "Ireme",
+    description:
+      "",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "yellow-text-gradient",
+      },
+    ],
+    image: jobit,
+    source_code_link: "https://github.com/", 
+    link:"https://ireme.onrender.com/",
+  },
 ];
 
 
