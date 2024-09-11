@@ -247,15 +247,14 @@ const projects = [
         color: "yellow-text-gradient",
       },
     ],
-    image: ireme,
+    image: travel,
     source_code_link: "https://github.com/", 
     link:"https://travel-tour1.vercel.app/",
   },
   {
     name: "Foodhome",
     description:
-      "
-A restaurant website designed to showcase a diverse menu, highlight special dishes, and provide an easy way for customers to explore dining options, make reservations, and order online.",
+      "Restaurant website designed to showcase a diverse menu, highlight special dishes, and provide an easy way for customers to explore dining options, make reservations, and order online.",
     tags: [
       {
         name: "html",
