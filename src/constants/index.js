@@ -251,6 +251,28 @@ const projects = [
     source_code_link: "https://github.com/", 
     link:"https://ireme.onrender.com/",
   },
+  {
+    name: "Travel",
+    description:
+      "",
+    tags: [
+      {
+        name: "html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "yellow-text-gradient",
+      },
+    ],
+    image: ireme,
+    source_code_link: "https://github.com/", 
+    link:"https://travel-tour1.vercel.app/",
+  },
 ];
 
 
