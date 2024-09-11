@@ -188,7 +188,7 @@ const projects = [
   {
     name: "CMSP",
     description:
-      "A web-based platform that allows patients to search, book, and manage appointments with healthcare providers, offering a convenient and efficient solution for all your medical needs.",
+      "A hospital website dedicated to providing comprehensive healthcare information, helping patients access medical services, schedule appointments, and connect with expert doctors.",
     tags: [
       {
         name: "react",
@@ -206,28 +206,6 @@ const projects = [
     image: carrent,
     source_code_link: "https://github.com/", 
     link:"https://clinique-medical-st-paul.onrender.com/",
-  },
-  {
-    name: "My Portfolio",
-    description:
-      "A personal portfolio website showcasing my projects, skills, and experience as a web developer. Users can explore my work, learn about my background, and get in touch with me for potential collaborations.",
-    tags: [
-      {
-        name: "vite",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwindcss",
-        color: "green-text-gradient",
-      },
-      {
-        name: "javascript",
-        color: "yellow-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/", 
-    link:"https://hatumacharles.onrender.com/",
   },
   {
     name: "Ireme",
@@ -254,7 +232,7 @@ const projects = [
   {
     name: "Travel",
     description:
-      "",
+      "A travel website designed to inspire and assist travelers in exploring destinations around the world.",
     tags: [
       {
         name: "html",
@@ -272,6 +250,51 @@ const projects = [
     image: ireme,
     source_code_link: "https://github.com/", 
     link:"https://travel-tour1.vercel.app/",
+  },
+  {
+    name: "Foodhome",
+    description:
+      "
+A restaurant website designed to showcase a diverse menu, highlight special dishes, and provide an easy way for customers to explore dining options, make reservations, and order online.",
+    tags: [
+      {
+        name: "html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "yellow-text-gradient",
+      },
+    ],
+    image: ireme,
+    source_code_link: "https://github.com/", 
+    link:"https://foodbase.onrender.com",
+  },
+  {
+    name: "My Portfolio",
+    description:
+      "A personal portfolio website showcasing my projects, skills, and experience as a web developer. Users can explore my work, learn about my background, and get in touch with me for potential collaborations.",
+    tags: [
+      {
+        name: "vite",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "green-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "yellow-text-gradient",
+      },
+    ],
+    image: jobit,
+    source_code_link: "https://github.com/", 
+    link:"https://hatumacharles.onrender.com/",
   },
 ];
 
