@@ -24,6 +24,7 @@ import {
   tripguide,
   threejs,
   ireme,
+  foodbase,
 } from "../assets";
 
 export const navLinks = [
@@ -269,7 +270,7 @@ const projects = [
         color: "yellow-text-gradient",
       },
     ],
-    image: ireme,
+    image: foodbase,
     source_code_link: "https://github.com/", 
     link:"https://foodbase.onrender.com",
   },
