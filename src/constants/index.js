@@ -23,6 +23,7 @@ import {
   jobit,
   tripguide,
   threejs,
+  ireme,
 } from "../assets";
 
 export const navLinks = [
@@ -231,7 +232,7 @@ const projects = [
   {
     name: "Ireme",
     description:
-      "A skill management system designed to showcase and track employees' skills, projects, and experience within an organization. Users can explore team members' skill sets, view completed work, and assess individual growth, making it easier to allocate resources and identify potential collaborations.",
+      "A skill management system designed to showcase and track employees' skills, projects, and experience within an organization. Users can explore team members' skill sets, view completed work, and assess individual growth .",
     tags: [
       {
         name: "react",
@@ -246,7 +247,7 @@ const projects = [
         color: "yellow-text-gradient",
       },
     ],
-    image: jobit,
+    image: ireme,
     source_code_link: "https://github.com/", 
     link:"https://ireme.onrender.com/",
   },
