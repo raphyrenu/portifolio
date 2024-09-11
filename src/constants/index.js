@@ -230,28 +230,7 @@ const projects = [
     source_code_link: "https://github.com/", 
     link:"https://ireme.onrender.com/",
   },
-  {
-    name: "Travel",
-    description:
-      "A travel website designed to inspire and assist travelers in exploring destinations around the world.",
-    tags: [
-      {
-        name: "html",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "css",
-        color: "green-text-gradient",
-      },
-      {
-        name: "javascript",
-        color: "yellow-text-gradient",
-      },
-    ],
-    image: travel,
-    source_code_link: "https://github.com/", 
-    link:"https://travel-tour1.vercel.app/",
-  },
+
   {
     name: "Foodhome",
     description:
