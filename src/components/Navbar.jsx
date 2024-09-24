@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { logo, menu, close, moon, sun } from "../assets";
 
 const Navbar = ({ darkMode, setDarkMode }) => {
   const [active, setActive] = useState("");
@@ -132,20 +132,15 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         {/* Dark mode toggle switch */}
         <div className="flex items-center ml-4">
           <label className="relative inline-flex items-center cursor-pointer">
-            <input
-              type="checkbox"
-              className="sr-only"
-              checked={darkMode}
-              onChange={toggleDarkMode}
+            <img
+              src={darkMode ? sun : moon} // Toggle image based on darkMode
+              alt="toggle theme"
+              className="w-[28px] h-[28px] object-contain"
+              onClick={toggleDarkMode} // Change this line
             />
-            <div className={`w-11 h-6 rounded-full ${darkMode ? "bg-gray-700" : "bg-gray-300"} transition-all duration-300 ease-in-out`}>
-              <span
-                className={`absolute left-0 w-6 h-6 bg-white rounded-full shadow transform transition-transform duration-300 ease-in-out ${darkMode ? "translate-x-full" : ""
-                  }`}
-              ></span>
-            </div>
           </label>
         </div>
+
       </div>
     </nav>
   );

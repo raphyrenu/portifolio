@@ -30,7 +30,9 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import travel from "./travel.png"
 import ireme from "./ireme.png";
-import foodbase from "./foodbase.png"
+import foodbase from "./foodbase.png";
+import moon from "./moon.svg";
+import sun from "./sun.svg";
 
 export {
   logo,
@@ -64,4 +66,6 @@ export {
   tripguide,
   travel,
   foodbase,
+  moon,
+  sun,
 };
