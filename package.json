@@ -7,7 +7,6 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
-    
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
@@ -17,6 +16,7 @@
     "maath": "^0.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-loader-spinner": "^6.1.6",
     "react-parallax-tilt": "^1.7.237",
     "react-router-dom": "^6.8.1",
     "react-vertical-timeline-component": "^3.6.0",

@@ -1,29 +1,44 @@
 import { BrowserRouter } from "react-router-dom";
-import React, { useState } from "react";
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
+import React, { useState, useEffect } from "react";
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas,Loading } from "./components";
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(false); // Manage dark mode state here
+  const [darkMode, setDarkMode] = useState(false);
+  const [loading, setLoading] = useState(true); 
+
+  useEffect(() => {
+    document.body.classList.toggle('dark', darkMode);
+    const timer = setTimeout(() => {
+      setLoading(false); // Hide loader after 3 seconds
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [darkMode]);
 
   return (
     <BrowserRouter>
       <div className={`relative z-0 dark:bg-primary dark:text-white bg-white text-black`}>
-        <div className={`dark:bg-hero-pattern bg-hero-pattern2 bg-cover bg-no-repeat bg-center `}>
-          <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-          <Hero  />
-        </div>
-        <About  />
-        <Experience />
-        <Tech  />
-        <Works />
-        <Feedbacks />
-        <div className="relative z-0">
-          <Contact />
-          <StarsCanvas />
-        </div>
+        {loading ? (
+          <Loading /> 
+        ) : (
+          <>
+            <div className={`dark:bg-hero-pattern bg-hero-pattern2 bg-cover bg-no-repeat bg-center`}>
+              <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+              <Hero />
+            </div>
+            <About />
+            <Experience />
+            <Tech />
+            <Works />
+            <Feedbacks />
+            <div className="relative z-0">
+              <Contact />
+              <StarsCanvas />
+            </div>
+          </>
+        )}
       </div>
     </BrowserRouter>
-  );h
+  );
 }
 
 export default App;
