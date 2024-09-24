@@ -10,7 +10,7 @@ const App = () => {
     document.body.classList.toggle('dark', darkMode);
     const timer = setTimeout(() => {
       setLoading(false); 
-    }, 5000);
+    }, 2000);
     return () => clearTimeout(timer);
   }, [darkMode]);
 
