@@ -9,7 +9,7 @@ const App = () => {
   useEffect(() => {
     document.body.classList.toggle('dark', darkMode);
     const timer = setTimeout(() => {
-      setLoading(false); // Hide loader after 3 seconds
+      setLoading(false); 
     }, 5000);
     return () => clearTimeout(timer);
   }, [darkMode]);
