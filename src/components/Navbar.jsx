@@ -44,7 +44,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   const toggleDarkMode = () => {
     const newDarkMode = !darkMode;
     setDarkMode(newDarkMode);
-    
+
     // Add or remove the "dark" class on the <html> element
     if (newDarkMode) {
       document.documentElement.classList.add("dark");
@@ -55,9 +55,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? (darkMode ? "bg-primary" : "bg-white") : "bg-transparent"
-      }`}
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${scrolled ? (darkMode ? "bg-primary" : "bg-white") : "bg-transparent"
+        }`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
@@ -70,9 +69,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
           <p
-            className={`text-[18px] font-bold cursor-pointer flex ${
-              darkMode ? "text-white" : "text-black"
-            }`}
+            className={`text-[18px] font-bold cursor-pointer flex ${darkMode ? "text-white" : "text-black"
+              }`}
           >
             Charles &nbsp;
             <span className="sm:block hidden">
@@ -81,14 +79,13 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             </span>
           </p>
         </Link>
-        
+
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`${
-                active === nav.title ? (darkMode ? "text-white" : "text-black") : "text-secondary"
-              } hover:${darkMode ? "text-white" : "text-black"} text-[18px] font-medium cursor-pointer`}
+              className={`${active === nav.title ? (darkMode ? "text-white" : "text-black") : "text-secondary"
+                } hover:${darkMode ? "text-white" : "text-black"} text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
@@ -100,22 +97,26 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           <img
             src={toggle ? close : menu}
             alt="menu"
-            className="w-[28px] h-[28px] object-contain"
+            className="w-[28px] h-[28px] object-contain invert dark:hidden"
+            onClick={() => setToggle(!toggle)}
+          />
+          <img
+            src={toggle ? close : menu}
+            alt="menu"
+            className="w-[28px] h-[28px] object-contain hidden dark:flex"
             onClick={() => setToggle(!toggle)}
           />
 
           <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 ${darkMode ? "bg-gray-900" : "bg-white"} absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            className={`${!toggle ? "hidden" : "flex"
+              } p-6 ${darkMode ? "bg-gray-900" : "bg-white"} absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? (darkMode ? "text-white" : "text-black") : "text-secondary"
-                  }`}
+                  className={`font-poppins font-medium cursor-pointer text-[16px] ${active === nav.title ? (darkMode ? "text-white" : "text-black") : "text-secondary"
+                    }`}
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(nav.title);
@@ -139,9 +140,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             />
             <div className={`w-11 h-6 rounded-full ${darkMode ? "bg-gray-700" : "bg-gray-300"} transition-all duration-300 ease-in-out`}>
               <span
-                className={`absolute left-0 w-6 h-6 bg-white rounded-full shadow transform transition-transform duration-300 ease-in-out ${
-                  darkMode ? "translate-x-full" : ""
-                }`}
+                className={`absolute left-0 w-6 h-6 bg-white rounded-full shadow transform transition-transform duration-300 ease-in-out ${darkMode ? "translate-x-full" : ""
+                  }`}
               ></span>
             </div>
           </label>
