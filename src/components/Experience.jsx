@@ -14,7 +14,7 @@ import { textVariant } from "../utils/motion";
 
 const ExperienceCard = ({ experience }) => {
   return (
-    <VerticalTimelineElement
+    <VerticalTimelineElement 
       contentStyle={{
         background: "transparent", // Use transparent for Tailwind CSS classes to apply
       }}

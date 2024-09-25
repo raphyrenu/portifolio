@@ -22,6 +22,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     "Designer",
   ];
 
+  // Scroll spy logic using IntersectionObserver
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -37,6 +38,35 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     return () => {
       clearInterval(roleInterval);
       window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const sectionElements = navLinks.map((link) => document.getElementById(link.id));
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.6 } // Trigger when 60% of the section is visible
+    );
+
+    sectionElements.forEach((section) => {
+      if (section) {
+        observer.observe(section);
+      }
+    });
+
+    return () => {
+      sectionElements.forEach((section) => {
+        if (section) {
+          observer.unobserve(section);
+        }
+      });
     };
   }, []);
 
@@ -74,8 +104,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           >
             Charles &nbsp;
             <span className="sm:block hidden">
-              {" "}
-              | {roles[currentRoleIndex]}
+              {" "}| {roles[currentRoleIndex]}
             </span>
           </p>
         </Link>
@@ -84,9 +113,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`${active === nav.title ? (darkMode ? "text-white" : "text-black") : "text-secondary"
+              className={`${active === nav.id ? (darkMode ? "text-white" : "text-black") : "text-secondary"
                 } hover:${darkMode ? "text-white" : "text-black"} text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
+              onClick={() => setActive(nav.id)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
@@ -115,11 +144,11 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${active === nav.title ? (darkMode ? "text-white" : "text-black") : "text-secondary"
+                  className={`font-poppins font-medium cursor-pointer text-[16px] ${active === nav.id ? (darkMode ? "text-white" : "text-black") : "text-secondary"
                     }`}
                   onClick={() => {
                     setToggle(!toggle);
-                    setActive(nav.title);
+                    setActive(nav.id);
                   }}
                 >
                   <a href={`#${nav.id}`}>{nav.title}</a>
