@@ -25,6 +25,16 @@ import {
   threejs,
   ireme,
   foodbase,
+  python,
+  java,
+  csharp,
+  php,
+  ruby,
+  swift,
+  go,
+  kotlin,
+  dart
+
 } from "../assets";
 
 export const navLinks = [
@@ -60,60 +70,30 @@ const services = [
     icon: creator,
   },
 ];
-
 const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
+  { name: "HTML 5", icon: html, category: "Frontend" },
+  { name: "CSS 3", icon: css, category: "Frontend" },
+  { name: "JavaScript", icon: javascript, category: "Frontend" },
+  { name: "TypeScript", icon: typescript, category: "Frontend" },
+  { name: "React JS", icon: reactjs, category: "Frontend" },
+  { name: "Redux Toolkit", icon: redux, category: "Frontend" },
+  { name: "Tailwind CSS", icon: tailwind, category: "Frontend" },
+  { name: "Node JS", icon: nodejs, category: "Backend" },
+  { name: "MongoDB", icon: mongodb, category: "Database" },
+  { name: "Three JS", icon: threejs, category: "Frontend" },
+  { name: "Git", icon: git, category: "Others" },
+  { name: "Figma", icon: figma, category: "Others" },
+  { name: "Docker", icon: docker, category: "Others" },
+  { name: "Python", icon: python, category: "Backend" },
+  { name: "Java", icon: java, category: "Backend" },
+  { name: "C#", icon: csharp, category: "Backend" },
+  { name: "PHP", icon: php, category: "Backend" },
+  { name: "Ruby", icon: ruby, category: "Backend" },
+  { name: "Swift", icon: swift, category: "Mobile" },
+  { name: "Go", icon: go, category: "Backend" },
+  { name: "Kotlin", icon: kotlin, category: "Others" },
+  { name: "Dart", icon: dart, category: "Mobile" }, // Flutter framework language
+  { name: "React Native", icon: reactjs, category: "Mobile" }, // iOS app development
 ];
 
 const experiences = [
@@ -205,13 +185,14 @@ const projects = [
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/", 
-    link:"https://clinique-medical-st-paul.onrender.com/",
+    source_code_link: "https://github.com/",
+    link: "https://clinique-medical-st-paul.onrender.com/",
+    category: "Full Stack", // New property added
   },
   {
     name: "Ireme",
     description:
-      "A skill management system designed to showcase and track employees' skills, projects, and experience within an organization. Users can explore team members' skill sets, view completed work, and assess individual growth .",
+      "A skill management system designed to showcase and track employees' skills, projects, and experience within an organization. Users can explore team members' skill sets, view completed work, and assess individual growth.",
     tags: [
       {
         name: "react",
@@ -227,10 +208,10 @@ const projects = [
       },
     ],
     image: ireme,
-    source_code_link: "https://github.com/", 
-    link:"https://ireme.onrender.com/",
+    source_code_link: "https://github.com/",
+    link: "https://ireme.onrender.com/",
+    category: "Frontend", // New property added
   },
-
   {
     name: "Foodhome",
     description:
@@ -250,8 +231,9 @@ const projects = [
       },
     ],
     image: foodbase,
-    source_code_link: "https://github.com/", 
-    link:"https://foodbase.onrender.com",
+    source_code_link: "https://github.com/",
+    link: "https://foodbase.onrender.com",
+    category: "Frontend", // New property added
   },
   {
     name: "My Portfolio",
@@ -272,8 +254,9 @@ const projects = [
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/", 
-    link:"https://hatumacharles.onrender.com/",
+    source_code_link: "https://github.com/",
+    link: "https://hatumacharles.onrender.com/",
+    category: "Frontend", 
   },
 ];
 

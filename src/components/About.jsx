@@ -47,7 +47,7 @@ const About = ({ darkMode }) => {
         variants={fadeIn("", "", 0.1, 1)}
         className={`mt-4 text-[17px] max-w-3xl leading-[30px] dark:text-white-100 text-black-800 `}
       >
-        I'm a skilled software developer with experience in TypeScript and JavaScript...
+        I'm a full-stack web developer dedicated to creating visually appealing, functional, and scalable web applications. Currently, I’m studying software development and Embedded Systems at Rwanda Coding Academy
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>

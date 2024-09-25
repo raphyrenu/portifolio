@@ -19,6 +19,15 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import python from "./tech/python.png";
+import java from "./tech/java.png";
+import csharp from "./tech/csharp.png";
+import php from "./tech/php.png";
+import ruby from "./tech/ruby.png";
+import swift from "./tech/swift.png";
+import go from "./tech/go.png";
+import kotlin from "./tech/kotlin.png";
+import dart from "./tech/dart.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -68,4 +77,14 @@ export {
   foodbase,
   moon,
   sun,
+  python,
+  java,
+  csharp,
+  php,
+  ruby,
+  swift,
+  go,
+  dart,
+  kotlin,
+
 };
