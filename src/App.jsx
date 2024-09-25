@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas,Loading } from "./components";
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas,Loading,SocialMedia} from "./components";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -25,6 +25,7 @@ const App = () => {
               <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
               <Hero />
             </div>
+            <SocialMedia />
             <About />
             <Experience />
             <Tech />
