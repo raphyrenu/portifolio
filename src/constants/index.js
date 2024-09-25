@@ -58,7 +58,7 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Mobile Developer",
     icon: mobile,
   },
   {
@@ -258,6 +258,7 @@ const projects = [
     link: "https://hatumacharles.onrender.com/",
     category: "Frontend", 
   },
+  
 ];
 
 

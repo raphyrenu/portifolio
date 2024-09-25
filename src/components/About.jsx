@@ -21,7 +21,7 @@ const ServiceCard = ({ index, title, icon, darkMode }) => (
           speed: 450,
         }}
         className={`rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col 
-          dark:bg-tertiary dark:text-white bg-white text-black
+          dark:bg-tertiary dark:text-white bg-white text-black border-2 border-black dark:border-primary
         `}
       >
         <img

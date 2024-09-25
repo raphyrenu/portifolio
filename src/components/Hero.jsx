@@ -17,9 +17,9 @@ const Hero = ({ darkMode }) => {
   useEffect(() => {
     const skillInterval = setInterval(() => {
       setCurrentSkillIndex((prevIndex) => (prevIndex + 1) % skills.length);
-    }, 3000); // Change skill every 3 seconds
+    }, 3000);
 
-    return () => clearInterval(skillInterval); // Clear interval on component unmount
+    return () => clearInterval(skillInterval); 
   }, []);
 
   return (
