@@ -5,7 +5,7 @@ import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close, moon, sun } from "../assets";
 
-const Navbar = ({ darkMode, setDarkMode }) => {
+const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -14,6 +14,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   const roles = [
     "Web Developer",
     "Game Developer",
+    "WordPress Developer",
     "Software Engineer",
     "Frontend Developer",
     "Backend Developer",
@@ -22,8 +23,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     "Designer",
   ];
 
-  // Scroll spy logic using IntersectionObserver
   useEffect(() => {
+    document.documentElement.classList.add("dark"); // Always enable dark mode
+
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       setScrolled(scrollTop > 100);
@@ -43,7 +45,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
   useEffect(() => {
     const sectionElements = navLinks.map((link) => document.getElementById(link.id));
-    
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -70,23 +72,11 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     };
   }, []);
 
-  // Toggle function for dark mode
-  const toggleDarkMode = () => {
-    const newDarkMode = !darkMode;
-    setDarkMode(newDarkMode);
-
-    // Add or remove the "dark" class on the <html> element
-    if (newDarkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  };
-
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${scrolled ? (darkMode ? "bg-primary" : "bg-white") : "bg-transparent"
-        }`}
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${
+        scrolled ? "bg-primary" : "bg-transparent"
+      }`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
@@ -98,14 +88,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain rounded-full" />
-          <p
-            className={`text-[18px] font-bold cursor-pointer flex ${darkMode ? "text-white" : "text-black"
-              }`}
-          >
-            Charles &nbsp;
-            <span className="sm:block hidden">
-              {" "}| {roles[currentRoleIndex]}
-            </span>
+          <p className="text-[18px] font-bold cursor-pointer flex text-white">
+            Raphael &nbsp;
+            <span className="sm:block hidden">| {roles[currentRoleIndex]}</span>
           </p>
         </Link>
 
@@ -113,8 +98,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`${active === nav.id ? (darkMode ? "text-white" : "text-black") : "text-secondary"
-                } hover:${darkMode ? "text-white" : "text-black"} text-[18px] font-medium cursor-pointer`}
+              className={`${
+                active === nav.id ? "text-white" : "text-secondary"
+              } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.id)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
@@ -126,26 +112,22 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           <img
             src={toggle ? close : menu}
             alt="menu"
-            className="w-[28px] h-[28px] object-contain invert dark:hidden"
-            onClick={() => setToggle(!toggle)}
-          />
-          <img
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-[28px] h-[28px] object-contain hidden dark:flex"
+            className="w-[28px] h-[28px] object-contain invert"
             onClick={() => setToggle(!toggle)}
           />
 
           <div
-            className={`${!toggle ? "hidden" : "flex"
-              } p-6 ${darkMode ? "bg-gray-900" : "bg-white"} absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            className={`${
+              !toggle ? "hidden" : "flex"
+            } p-6 bg-gray-900 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${active === nav.id ? (darkMode ? "text-white" : "text-black") : "text-secondary"
-                    }`}
+                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                    active === nav.id ? "text-white" : "text-secondary"
+                  }`}
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(nav.id);
@@ -157,19 +139,6 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             </ul>
           </div>
         </div>
-
-        {/* Dark mode toggle switch */}
-        <div className="flex items-center ml-4">
-          <label className="relative inline-flex items-center cursor-pointer">
-            <img
-              src={darkMode ? sun : moon} // Toggle image based on darkMode
-              alt="toggle theme"
-              className="w-[28px] h-[28px] object-contain"
-              onClick={toggleDarkMode} // Change this line
-            />
-          </label>
-        </div>
-
       </div>
     </nav>
   );

@@ -42,13 +42,18 @@ import ireme from "./ireme.png";
 import foodbase from "./foodbase.png";
 import moon from "./moon.svg";
 import sun from "./sun.svg";
+import wordpress from './wordpress.png'
+import eventhive from './eventhive.png'
+import playhive from './playhive.png'
 
 export {
   logo,
-  backend,
+    backend,
+  wordpress,
   creator,
   mobile,
-  web,
+    web,
+  eventhive,
   github,
   menu,
   close,
@@ -64,7 +69,8 @@ export {
   reactjs,
   redux,
   tailwind,
-  typescript,
+    typescript,
+  playhive,
   threejs,
   meta,
   shopify,

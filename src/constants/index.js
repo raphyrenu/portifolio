@@ -1,7 +1,8 @@
 import {
   mobile,
   backend,
-  creator,
+creator,
+
   web,
   javascript,
   typescript,
@@ -30,10 +31,13 @@ import {
   csharp,
   php,
   ruby,
-  swift,
+    swift,
+  wordpress,
   go,
-  kotlin,
-  dart
+    kotlin,
+  eventhive,
+  dart,
+  playhive
 
 } from "../assets";
 
@@ -72,7 +76,8 @@ const services = [
 ];
 const technologies = [
   { name: "HTML 5", icon: html, category: "Frontend" },
-  { name: "CSS 3", icon: css, category: "Frontend" },
+    { name: "CSS 3", icon: css, category: "Frontend" },
+    { name: "Wordpress", icon: wordpress, category: "Frontend" },
   { name: "JavaScript", icon: javascript, category: "Frontend" },
   { name: "TypeScript", icon: typescript, category: "Frontend" },
   { name: "React JS", icon: reactjs, category: "Frontend" },
@@ -188,8 +193,31 @@ const projects = [
     source_code_link: "https://github.com/",
     link: "https://clinique-medical-st-paul.onrender.com/",
     category: "Full Stack", // New property added
-  },
-  {
+    },
+    {
+        name: "EventHive",
+    description:
+      "A platform to create, manage, and discover events. Users can register, schedule events, manage attendees, and explore upcoming events based on categories or locations.",
+    tags: [
+      {
+        name: "NextJs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "node",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: eventhive,
+    source_code_link: "https://github.com/",
+    link: "https://eventshive.vercel.app/",
+    category: "Full Stack", // New property added
+    },
+{
     name: "Ireme",
     description:
       "A skill management system designed to showcase and track employees' skills, projects, and experience within an organization. Users can explore team members' skill sets, view completed work, and assess individual growth.",
@@ -207,11 +235,40 @@ const projects = [
         color: "yellow-text-gradient",
       },
     ],
+
     image: ireme,
     source_code_link: "https://github.com/",
     link: "https://ireme.onrender.com/",
     category: "Frontend", // New property added
-  },
+    },
+    {
+        name: "Name: PlayHive",
+
+        description:
+          "PlayHive is an online media player that allows users to stream, organize, and enjoy their audio and video files directly on the web.",
+        tags: [
+          {
+            name: "NextJs",
+            color: "blue-text-gradient",
+          },
+          {
+            name: "css",
+            color: "green-text-gradient",
+          },
+          {
+            name: "javascript",
+            color: "yellow-text-gradient",
+          },
+        ],
+
+        image: playhive,
+        source_code_link: "https://github.com/",
+        link: "https://playhive-play.vercel.app/",
+        category: "Frontend", // New property added
+        },
+
+
+
   {
     name: "Foodhome",
     description:
@@ -236,29 +293,22 @@ const projects = [
     category: "Frontend", // New property added
   },
   {
-    name: "My Portfolio",
+    name: "Polo Portfolio",
     description:
       "A personal portfolio website showcasing my projects, skills, and experience as a web developer. Users can explore my work, learn about my background, and get in touch with me for potential collaborations.",
     tags: [
       {
-        name: "vite",
+        name: "Wordpress",
         color: "blue-text-gradient",
       },
-      {
-        name: "tailwindcss",
-        color: "green-text-gradient",
-      },
-      {
-        name: "javascript",
-        color: "yellow-text-gradient",
-      },
+     
     ],
     image: jobit,
     source_code_link: "https://github.com/",
     link: "https://hatumacharles.onrender.com/",
-    category: "Frontend", 
+    category: "Frontend",
   },
-  
+
 ];
 
 

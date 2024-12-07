@@ -8,7 +8,8 @@ const Hero = ({ darkMode }) => {
 
   const skills = [
     "3D visuals, user interfaces <br /> and web applications",
-    "full-stack web applications <br /> and APIs",
+      "full-stack web applications <br /> and APIs",
+    "Word press",
     "mobile applications <br /> and game development",
     "graphic designs <br /> and animations",
     "interactive user experiences <br />",
@@ -19,7 +20,7 @@ const Hero = ({ darkMode }) => {
       setCurrentSkillIndex((prevIndex) => (prevIndex + 1) % skills.length);
     }, 3000);
 
-    return () => clearInterval(skillInterval); 
+    return () => clearInterval(skillInterval);
   }, []);
 
   return (
@@ -32,7 +33,7 @@ const Hero = ({ darkMode }) => {
 
         <div>
           <h1 className={`${styles.heroHeadText} dark:text-white-100 text-gray-800`}>
-            Hi, I'm <span className="text-[#915EFF]">Charles</span>
+            Hi, I'm <span className="text-[#915EFF]">Raphael</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2  dark:text-white-100' : 'text-gray-800 `}>
             I develop <span dangerouslySetInnerHTML={{ __html: skills[currentSkillIndex] }} />
