@@ -146,7 +146,7 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Charles proved me wrong.",
+      "I thought it was impossible to make a website as beautiful as our product, but Raphael proved me wrong.",
     name: "Ihirwe",
     designation: "Designer",
     company: "RCA",
@@ -154,7 +154,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Charles does.",
+      "I've never met a web developer who truly cares about their clients' success like Raphael does.",
     name: "Mugabe Herve",
     designation: "Student",
     company: "St Kizito",
@@ -162,7 +162,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "After Charles optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      "After Raphael optimized our website, our traffic increased by 50%. We can't thank them enough!",
     name: "Roberto Mulla",
     designation: "Singer",
     company: "Mulla Enterprises",
@@ -301,11 +301,11 @@ const projects = [
         name: "Wordpress",
         color: "blue-text-gradient",
       },
-     
+
     ],
     image: jobit,
     source_code_link: "https://github.com/",
-    link: "https://hatumacharles.onrender.com/",
+    link: "https://m-polo.onrender.com/",
     category: "Frontend",
   },
 
