@@ -2,7 +2,7 @@ import { FaTwitter, FaLinkedin, FaInstagram, FaGithub, FaEnvelope, FaWhatsapp } 
 
 const SocialMedia = () => {
   return (
-    <div className="fixed top-3/4 left-10 transform -translate-y-1/2">
+    <div className="fixed top-3/4 z-50 left-10 transform -translate-y-1/2">
       <ul className="space-y-3">
         <li>
           <a href="https://github.com/raphyrenu" target="_blank" rel="noopener noreferrer">
